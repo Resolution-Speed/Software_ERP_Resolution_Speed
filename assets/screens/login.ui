@@ -286,7 +286,7 @@ background-repeat: none;</string>
   </widget>
  </widget>
  <resources>
-  <include location="login_images.qrc"/>
+  <include location="../img/login_images.qrc"/>
  </resources>
  <connections/>
 </ui>

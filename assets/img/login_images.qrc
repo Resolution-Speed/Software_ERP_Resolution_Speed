@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="images">
+    <file>Resolution_speed_small.png</file>
+    <file>Logo_Resolution_speed.png</file>
+  </qresource>
+</RCC>

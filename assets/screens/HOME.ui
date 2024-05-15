@@ -323,7 +323,7 @@ QPushButton:hover
   </widget>
  </widget>
  <resources>
-  <include location="home_images.qrc"/>
+  <include location="../img/home_images.qrc"/>
  </resources>
  <connections/>
 </ui>
