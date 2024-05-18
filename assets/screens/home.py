@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'HOME.ui'
+## Form generated from reading UI file 'home.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.0
 ##
@@ -17,18 +17,18 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QMainWindow,
     QPushButton, QSizePolicy, QTextBrowser, QWidget)
-import assets.img.home_images
+import assets.img.home_images   
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(600, 530)
-        MainWindow.setMinimumSize(QSize(600, 530))
-        MainWindow.setMaximumSize(QSize(600, 530))
-        MainWindow.setStyleSheet(u"background-color: rgb(93, 215, 241);\n"
+class Ui_HomePage(object):
+    def setupUi(self, HomePage):
+        if not HomePage.objectName():
+            HomePage.setObjectName(u"HomePage")
+        HomePage.resize(600, 530)
+        HomePage.setMinimumSize(QSize(600, 530))
+        HomePage.setMaximumSize(QSize(600, 530))
+        HomePage.setStyleSheet(u"background-color: rgb(93, 215, 241);\n"
 "font: 12pt \"Inter\";")
-        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget = QWidget(HomePage)
         self.centralwidget.setObjectName(u"centralwidget")
         self.homeButton = QPushButton(self.centralwidget)
         self.homeButton.setObjectName(u"homeButton")
@@ -92,16 +92,16 @@ class Ui_MainWindow(object):
         self.wrapperHeader.setObjectName(u"wrapperHeader")
         self.wrapperHeader.setGeometry(QRect(0, 0, 601, 50))
         self.wrapperHeader.setStyleSheet(u"background-color: rgb(0, 0, 0);")
-        self.homeButton_2 = QPushButton(self.centralwidget)
-        self.homeButton_2.setObjectName(u"homeButton_2")
-        self.homeButton_2.setGeometry(QRect(80, 230, 100, 100))
+        self.homeButton_cad_prod = QPushButton(self.centralwidget)
+        self.homeButton_cad_prod.setObjectName(u"homeButton_cad_prod")
+        self.homeButton_cad_prod.setGeometry(QRect(80, 230, 100, 100))
         font1 = QFont()
         font1.setFamilies([u"Inter"])
         font1.setBold(True)
         font1.setItalic(False)
-        self.homeButton_2.setFont(font1)
-        self.homeButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.homeButton_2.setStyleSheet(u"QPushButton\n"
+        self.homeButton_cad_prod.setFont(font1)
+        self.homeButton_cad_prod.setCursor(QCursor(Qt.PointingHandCursor))
+        self.homeButton_cad_prod.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	image: url(:/menuImg/product.png);\n"
 "	border: 1px solid #000000;\n"
@@ -121,12 +121,12 @@ class Ui_MainWindow(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	color: #000000;\n"
 "}")
-        self.homeButton_3 = QPushButton(self.centralwidget)
-        self.homeButton_3.setObjectName(u"homeButton_3")
-        self.homeButton_3.setGeometry(QRect(250, 230, 100, 100))
-        self.homeButton_3.setFont(font1)
-        self.homeButton_3.setCursor(QCursor(Qt.PointingHandCursor))
-        self.homeButton_3.setStyleSheet(u"QPushButton\n"
+        self.homeButton_ped_ven = QPushButton(self.centralwidget)
+        self.homeButton_ped_ven.setObjectName(u"homeButton_ped_ven")
+        self.homeButton_ped_ven.setGeometry(QRect(250, 230, 100, 100))
+        self.homeButton_ped_ven.setFont(font1)
+        self.homeButton_ped_ven.setCursor(QCursor(Qt.PointingHandCursor))
+        self.homeButton_ped_ven.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	image: url(:/menuImg/sell_request.png);\n"
 "	border: 1px solid #000000;\n"
@@ -146,12 +146,12 @@ class Ui_MainWindow(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	color: #000000;\n"
 "}")
-        self.homeButton_4 = QPushButton(self.centralwidget)
-        self.homeButton_4.setObjectName(u"homeButton_4")
-        self.homeButton_4.setGeometry(QRect(420, 230, 100, 100))
-        self.homeButton_4.setFont(font1)
-        self.homeButton_4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.homeButton_4.setStyleSheet(u"QPushButton\n"
+        self.homeButton_nfe = QPushButton(self.centralwidget)
+        self.homeButton_nfe.setObjectName(u"homeButton_nfe")
+        self.homeButton_nfe.setGeometry(QRect(420, 230, 100, 100))
+        self.homeButton_nfe.setFont(font1)
+        self.homeButton_nfe.setCursor(QCursor(Qt.PointingHandCursor))
+        self.homeButton_nfe.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	image: url(:/menuImg/nfe.png);\n"
 "	border: 1px solid #000000;\n"
@@ -171,34 +171,34 @@ class Ui_MainWindow(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	color: #000000;\n"
 "}")
-        MainWindow.setCentralWidget(self.centralwidget)
+        HomePage.setCentralWidget(self.centralwidget)
         self.wrapperHeader.raise_()
         self.exitButton.raise_()
         self.wrapperMenu.raise_()
         self.textBrowser.raise_()
         self.homeButton.raise_()
         self.homeTitle.raise_()
-        self.homeButton_2.raise_()
-        self.homeButton_3.raise_()
-        self.homeButton_4.raise_()
+        self.homeButton_cad_prod.raise_()
+        self.homeButton_ped_ven.raise_()
+        self.homeButton_nfe.raise_()
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(HomePage)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(HomePage)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.homeButton.setText(QCoreApplication.translate("MainWindow", u"HOME", None))
-        self.exitButton.setText(QCoreApplication.translate("MainWindow", u"SAIR", None))
-        self.homeTitle.setText(QCoreApplication.translate("MainWindow", u"HOME", None))
-        self.textBrowser.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+    def retranslateUi(self, HomePage):
+        HomePage.setWindowTitle(QCoreApplication.translate("HomePage", u"Pagina Inicial", None))
+        self.homeButton.setText(QCoreApplication.translate("HomePage", u"HOME", None))
+        self.exitButton.setText(QCoreApplication.translate("HomePage", u"SAIR", None))
+        self.homeTitle.setText(QCoreApplication.translate("HomePage", u"HOME", None))
+        self.textBrowser.setHtml(QCoreApplication.translate("HomePage", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Inter'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt; font-weight:600;\">MENU PRINCIPAL</span></p></body></html>", None))
-        self.homeButton_2.setText(QCoreApplication.translate("MainWindow", u"Cadastro de Produto", None))
-        self.homeButton_3.setText(QCoreApplication.translate("MainWindow", u"Pedido de Venda", None))
-        self.homeButton_4.setText(QCoreApplication.translate("MainWindow", u"Nota Fiscal de Sa\u00edda", None))
+        self.homeButton_cad_prod.setText(QCoreApplication.translate("HomePage", u"Cadastro de Produto", None))
+        self.homeButton_ped_ven.setText(QCoreApplication.translate("HomePage", u"Pedido de Venda", None))
+        self.homeButton_nfe.setText(QCoreApplication.translate("HomePage", u"Nota Fiscal de Sa\u00edda", None))
     # retranslateUi
 

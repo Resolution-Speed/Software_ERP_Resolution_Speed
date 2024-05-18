@@ -15,33 +15,33 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QMainWindow,
-    QPushButton, QSizePolicy, QTextEdit, QWidget)
-import assets.img.login_images
+from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QWidget)
+import assets.img.login_images 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(600, 530)
-        MainWindow.setMinimumSize(QSize(600, 530))
-        MainWindow.setMaximumSize(QSize(600, 530))
-        MainWindow.setStyleSheet(u"background-color: #000;\n"
+class Ui_LoginPage(object):
+    def setupUi(self, LoginPage):
+        if not LoginPage.objectName():
+            LoginPage.setObjectName(u"LoginPage")
+        LoginPage.resize(600, 530)
+        LoginPage.setMinimumSize(QSize(600, 530))
+        LoginPage.setMaximumSize(QSize(600, 530))
+        LoginPage.setStyleSheet(u"background-color: #000;\n"
 "font: \"Inter\" 12pt ;\n"
 "\n"
 "")
-        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget = QWidget(LoginPage)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.pushButton = QPushButton(self.centralwidget)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(90, 330, 151, 31))
-        self.pushButton.setMinimumSize(QSize(111, 0))
+        self.button_login = QPushButton(self.centralwidget)
+        self.button_login.setObjectName(u"button_login")
+        self.button_login.setGeometry(QRect(90, 330, 151, 31))
+        self.button_login.setMinimumSize(QSize(111, 0))
         font = QFont()
         font.setFamilies([u"12pt"])
         font.setBold(False)
         font.setItalic(False)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.557, y1:0.534364, x2:1, y2:0.506, stop:0.0397727 rgba(0, 215, 241, 1), stop:0.994318 rgba(93, 215, 241, 1));\n"
+        self.button_login.setFont(font)
+        self.button_login.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.557, y1:0.534364, x2:1, y2:0.506, stop:0.0397727 rgba(0, 215, 241, 1), stop:0.994318 rgba(93, 215, 241, 1));\n"
 "color: rgb(255, 255, 255);\n"
 "border:none;\n"
 "width: 100px;\n"
@@ -74,23 +74,6 @@ class Ui_MainWindow(object):
         self.label_title_login.setStyleSheet(u"background-color:none;\n"
 "color:#FFF;\n"
 "")
-        self.usuario = QTextEdit(self.centralwidget)
-        self.usuario.setObjectName(u"usuario")
-        self.usuario.setGeometry(QRect(80, 210, 171, 31))
-        self.usuario.setFont(font)
-        self.usuario.setStyleSheet(u"background-color:#FFF;\n"
-"width: 100px;\n"
-"height: 100px;\n"
-"border-radius: 11px;\n"
-"")
-        self.textEdit = QTextEdit(self.centralwidget)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setGeometry(QRect(80, 280, 171, 31))
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet(u"background-color:#FFF;\n"
-"width: 100px;\n"
-"height: 100px;\n"
-"border-radius: 11px;")
         self.graphicsView = QGraphicsView(self.centralwidget)
         self.graphicsView.setObjectName(u"graphicsView")
         self.graphicsView.setGeometry(QRect(60, 110, 481, 281))
@@ -113,29 +96,47 @@ class Ui_MainWindow(object):
 "background-image: url(:/images/Resolution_speed_small.png);\n"
 "\n"
 "background-repeat: none;")
-        MainWindow.setCentralWidget(self.centralwidget)
+        self.lineField_password = QLineEdit(self.centralwidget)
+        self.lineField_password.setObjectName(u"lineField_password")
+        self.lineField_password.setGeometry(QRect(80, 210, 171, 31))
+        self.lineField_password.setStyleSheet(u"background-color:#FFF;\n"
+"width: 100px;\n"
+"height: 100px;\n"
+"border-radius: 11px;\n"
+"")
+        self.lineField_username = QLineEdit(self.centralwidget)
+        self.lineField_username.setObjectName(u"lineField_username")
+        self.lineField_username.setGeometry(QRect(80, 280, 171, 31))
+        self.lineField_username.setStyleSheet(u"background-color:#FFF;\n"
+"width: 100px;\n"
+"height: 100px;\n"
+"border-radius: 11px;\n"
+"")
+        LoginPage.setCentralWidget(self.centralwidget)
         self.graphicsView.raise_()
         self.label_title_login.raise_()
-        self.pushButton.raise_()
+        self.button_login.raise_()
         self.label_3.raise_()
         self.label_senha.raise_()
         self.label_logo.raise_()
-        self.usuario.raise_()
-        self.textEdit.raise_()
         self.logo_image.raise_()
         self.graphicsView_2.raise_()
+        self.lineField_password.raise_()
+        self.lineField_username.raise_()
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(LoginPage)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(LoginPage)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Entrar", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Usu\u00e1rio", None))
-        self.label_senha.setText(QCoreApplication.translate("MainWindow", u"Senha", None))
-        self.label_logo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Resolution Speed</span></p></body></html>", None))
-        self.label_title_login.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:600;\">Login</span></p></body></html>", None))
+    def retranslateUi(self, LoginPage):
+        LoginPage.setWindowTitle(QCoreApplication.translate("LoginPage", u"Login", None))
+        self.button_login.setText(QCoreApplication.translate("LoginPage", u"Entrar", None))
+        self.label_3.setText(QCoreApplication.translate("LoginPage", u"Usu\u00e1rio", None))
+        self.label_senha.setText(QCoreApplication.translate("LoginPage", u"Senha", None))
+        self.label_logo.setText(QCoreApplication.translate("LoginPage", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Resolution Speed</span></p></body></html>", None))
+        self.label_title_login.setText(QCoreApplication.translate("LoginPage", u"<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:600;\">Login</span></p></body></html>", None))
+        self.lineField_password.setText("")
+        self.lineField_username.setText("")
     # retranslateUi
 
