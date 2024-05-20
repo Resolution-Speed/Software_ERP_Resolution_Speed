@@ -72,7 +72,7 @@ border-radius: 15px;</string>
      <rect>
       <x>90</x>
       <y>190</y>
-      <width>41</width>
+      <width>51</width>
       <height>21</height>
      </rect>
     </property>
@@ -98,7 +98,7 @@ background-color:none</string>
      <rect>
       <x>90</x>
       <y>260</y>
-      <width>31</width>
+      <width>41</width>
       <height>21</height>
      </rect>
     </property>
