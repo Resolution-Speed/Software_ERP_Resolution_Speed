@@ -55,13 +55,22 @@ font: &quot;Inter&quot; 12pt ;
       <bold>false</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.557, y1:0.534364, x2:1, y2:0.506, stop:0.0397727 rgba(0, 215, 241, 1), stop:0.994318 rgba(93, 215, 241, 1));
-color: rgb(255, 255, 255);
-border:none;
-width: 100px;
-height: 100px;
-border-radius: 15px;</string>
+     <string notr="true">QPushButton {
+	background-color: rgb(93, 215, 241);
+	color: rgb(255, 255, 255);
+	border:1px solid rgb(93, 215, 241);
+	width: 100px;
+	height: 100px;
+	border-radius: 15px;
+}
+QPushButton:hover{
+	background-color: #000;
+	color: rgb(93, 215, 241);
+}</string>
     </property>
     <property name="text">
      <string>Entrar</string>
@@ -224,7 +233,7 @@ background-image: url(:/images/Resolution_speed_small.png);
 background-repeat: none;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineField_password">
+   <widget class="QLineEdit" name="lineField_username">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -244,7 +253,7 @@ border-radius: 11px;
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineField_username">
+   <widget class="QLineEdit" name="lineField_password">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -266,14 +275,14 @@ border-radius: 11px;
    </widget>
    <zorder>graphicsView</zorder>
    <zorder>label_title_login</zorder>
-   <zorder>button_login</zorder>
    <zorder>label_3</zorder>
    <zorder>label_senha</zorder>
    <zorder>label_logo</zorder>
    <zorder>logo_image</zorder>
    <zorder>graphicsView_2</zorder>
-   <zorder>lineField_password</zorder>
    <zorder>lineField_username</zorder>
+   <zorder>lineField_password</zorder>
+   <zorder>button_login</zorder>
   </widget>
  </widget>
  <resources>
