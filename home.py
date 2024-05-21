@@ -207,7 +207,11 @@ class Ui_HomePage(object):
 
         def actionOpenPed():
             pedidoVendaOpen(self)
+
+        def exitWindow():
+            HomePage.close()
         
+        self.exitButton.clicked.connect(exitWindow)
         self.homeButton_cad_prod.clicked.connect(actionOpenProd)
         self.homeButton_ped_ven.clicked.connect(actionOpenPed)
     # setupUi

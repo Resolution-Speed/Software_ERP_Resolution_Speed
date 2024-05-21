@@ -7,7 +7,7 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+import sys
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -209,6 +209,12 @@ class Ui_RegProductPage(object):
         self.retranslateUi(RegProductPage)
 
         QMetaObject.connectSlotsByName(RegProductPage)
+    
+        def exitWindow():
+             RegProductPage.close()
+        
+        self.homeButton.clicked.connect(exitWindow)
+        self.exitButton.clicked.connect(exitWindow)
     # setupUi
 
     def retranslateUi(self, RegProductPage):
@@ -236,3 +242,10 @@ class Ui_RegProductPage(object):
         self.exitButton.setText(QCoreApplication.translate("RegProductPage", u"SAIR", None))
     # retranslateUi
 
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    product_window = QMainWindow()
+    ui = Ui_RegProductPage()
+    ui.setupUi(product_window)
+    product_window.show()
+    sys.exit(app.exec())

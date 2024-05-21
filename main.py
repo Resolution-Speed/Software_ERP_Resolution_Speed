@@ -12,9 +12,9 @@ def validarLogin(self, username, password, LoginPage):
 #Function "Validar Login" end
 
 #function abrir tela cadastro
-
 def regProdOpen(self):
     self.regProdOpen()
 
+#Function abrir tela pedido de venda
 def pedidoVendaOpen(self):
     self.pedVenOpen()

@@ -7,7 +7,7 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+import sys
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
@@ -194,6 +194,13 @@ class Ui_PedVendaPage(object):
         self.retranslateUi(PedVendaPage)
 
         QMetaObject.connectSlotsByName(PedVendaPage)
+
+        def exitWindow():
+            PedVendaPage.close()
+        
+        self.homeButton.clicked.connect(exitWindow)
+        self.exitButton.clicked.connect(exitWindow)
+
     # setupUi
 
     def retranslateUi(self, PedVendaPage):
@@ -222,3 +229,10 @@ class Ui_PedVendaPage(object):
         self.exitButton.setText(QCoreApplication.translate("PedVendaPage", u"SAIR", None))
     # retranslateUi
 
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    pedido_window = QMainWindow()
+    ui = Ui_PedVendaPage()
+    ui.setupUi(pedido_window)
+    pedido_window.show()
+    sys.exit(app.exec())

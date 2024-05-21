@@ -147,7 +147,7 @@ class Ui_LoginPage(object):
         #Inicio Evento do botão login
         def action():
             validarLogin(self, self.lineField_username.text(), self.lineField_password.text(), LoginPage)
-
+            
         self.button_login.clicked.connect(action)
         #Fim evento do botão login
     # setupUi
