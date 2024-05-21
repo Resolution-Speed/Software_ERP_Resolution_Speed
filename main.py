@@ -1,10 +1,6 @@
 """
 Main file for Public functions
 """
-from PySide6.QtWidgets import QMainWindow
-from home import Ui_HomePage
-from login import Ui_LoginPage
-
 #Function "Validar Login" start
 def validarLogin(self, username, password, LoginPage):
     if username == "teste" and password == "teste":
@@ -14,3 +10,11 @@ def validarLogin(self, username, password, LoginPage):
     else:
         print("Errado, digite novamente :)")
 #Function "Validar Login" end
+
+#function abrir tela cadastro
+
+def regProdOpen(self):
+    self.regProdOpen()
+
+def pedidoVendaOpen(self):
+    self.pedVenOpen()

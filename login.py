@@ -20,11 +20,14 @@ from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QWidget)
 import assets.img.login_images
 from main import validarLogin
-from change_to_home import abrirHome
+from home import Ui_HomePage
 
 class Ui_LoginPage(object):
     def homeOpen(self):
-        abrirHome(self)
+        self.window2 = QMainWindow()
+        self.ui = Ui_HomePage()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
 
     def setupUi(self, LoginPage):
         if not LoginPage.objectName():

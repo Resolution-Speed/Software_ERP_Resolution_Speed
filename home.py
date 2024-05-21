@@ -18,12 +18,22 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QMainWindow,
     QPushButton, QSizePolicy, QTextBrowser, QWidget)
 import assets.img.home_images
-from change_to_login import abrirLogin
-from main import exitToLogin
+from cadastro_produto import Ui_RegProductPage
+from pedido_venda import Ui_PedVendaPage
+from main import regProdOpen, pedidoVendaOpen
 
 class Ui_HomePage(object):
-    def loginOpen(self):
-        abrirLogin(self)
+    def regProdOpen(self):
+        self.window3 = QMainWindow()
+        self.ui = Ui_RegProductPage()
+        self.ui.setupUi(self.window3)
+        self.window3.show()
+        
+    def pedVenOpen(self):
+        self.window4 = QMainWindow()
+        self.ui = Ui_PedVendaPage()
+        self.ui.setupUi(self.window4)
+        self.window4.show()
 
     def setupUi(self, HomePage):
         if not HomePage.objectName():
@@ -191,12 +201,15 @@ class Ui_HomePage(object):
 
         QMetaObject.connectSlotsByName(HomePage)
 
-        #Inicio Evento botão sair
-        def exitAction():
-            exitToLogin(self, HomePage)
+        #Function open "Registrar Projeto"
+        def actionOpenProd():
+            regProdOpen(self)
+
+        def actionOpenPed():
+            pedidoVendaOpen(self)
         
-        ui.exitButton.clicked.connect(exitAction)
-        #Inicio Evento botão sair
+        self.homeButton_cad_prod.clicked.connect(actionOpenProd)
+        self.homeButton_ped_ven.clicked.connect(actionOpenPed)
     # setupUi
 
     def retranslateUi(self, HomePage):
