@@ -19,6 +19,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QWidget)
 import assets.img.login_images
+import mysql.connector
 from main import validarLogin
 from home import Ui_HomePage
 
@@ -144,11 +145,34 @@ class Ui_LoginPage(object):
 
         QMetaObject.connectSlotsByName(LoginPage)
 
-        #Inicio Evento do botão login
+        #Inicio conexão com banco de dados 
+        banco = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="erp_resolution_speed"
+        )
+        #Fim conexão com banco de dados
+
         def action():
-            validarLogin(self, self.lineField_username.text(), self.lineField_password.text(), LoginPage)
-            
+                cursor = banco.cursor()
+                cursor.execute("select userNome, senha from usuario WHERE userNome = '%s' AND senha = '%s'" %(self.lineField_username.text(), self.lineField_password.text()))
+                result_select = cursor.fetchone()
+                if not result_select == None:
+                        user_result = result_select[0]
+                        pswd_result = result_select[1]
+                        
+                        validarLogin(self, self.lineField_username.text(), user_result, self.lineField_password.text(), pswd_result, LoginPage)
+                else:
+                     print("Errado, Digite novamnete :)")
+
         self.button_login.clicked.connect(action)
+        #Inicio Evento do botão login
+        """
+        def action():
+            validarLogin(self, user_line, self.lineField_username.text(), pswd_line, self.lineField_password.text(), LoginPage)
+        self.button_login.clicked.connect(action)
+        """
         #Fim evento do botão login
     # setupUi
 

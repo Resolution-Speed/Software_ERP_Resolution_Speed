@@ -2,8 +2,8 @@
 Main file for Public functions
 """
 #Function "Validar Login" start
-def validarLogin(self, username, password, LoginPage):
-    if username == "teste" and password == "teste":
+def validarLogin(self, username_write, username_sql, password_write, password_sql, LoginPage):
+    if username_write == username_sql and password_write == password_sql:
         print("Certa resposta")
         self.homeOpen()
         LoginPage.close()
