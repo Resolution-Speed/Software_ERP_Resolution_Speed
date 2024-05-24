@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QTextBrowser,
     QWidget)
+import mysql.connector
 
 class Ui_RegProductPage(object):
     def setupUi(self, RegProductPage):
@@ -200,21 +201,72 @@ class Ui_RegProductPage(object):
         self.prod_largura.setGeometry(QRect(390, 260, 100, 25))
         self.prod_precoCusto = QLineEdit(self.centralwidget)
         self.prod_precoCusto.setObjectName(u"prod_precoCusto")
-        self.prod_precoCusto.setGeometry(QRect(240, 320, 100, 25))
+        self.prod_precoCusto.setGeometry(QRect(230, 320, 100, 25))
         self.prod_fornecedor = QLineEdit(self.centralwidget)
         self.prod_fornecedor.setObjectName(u"prod_fornecedor")
         self.prod_fornecedor.setGeometry(QRect(80, 320, 100, 25))
         RegProductPage.setCentralWidget(self.centralwidget)
+        QWidget.setTabOrder(self.homeButton, self.exitButton)
+        QWidget.setTabOrder(self.exitButton, self.prod_cod)
+        QWidget.setTabOrder(self.prod_cod, self.prod_nbmncm)
+        QWidget.setTabOrder(self.prod_nbmncm, self.prod_descricao)
+        QWidget.setTabOrder(self.prod_descricao, self.prod_unidade)
+        QWidget.setTabOrder(self.prod_unidade, self.prod_especie)
+        QWidget.setTabOrder(self.prod_especie, self.prod_pesoL)
+        QWidget.setTabOrder(self.prod_pesoL, self.prod_pesoB)
+        QWidget.setTabOrder(self.prod_pesoB, self.prod_comprimento)
+        QWidget.setTabOrder(self.prod_comprimento, self.prod_altura)
+        QWidget.setTabOrder(self.prod_altura, self.prod_largura)
+        QWidget.setTabOrder(self.prod_largura, self.prod_fornecedor)
+        QWidget.setTabOrder(self.prod_fornecedor, self.prod_precoCusto)
+        QWidget.setTabOrder(self.prod_precoCusto, self.btn_cadastro)
+        QWidget.setTabOrder(self.btn_cadastro, self.wrapperHeader)
+        QWidget.setTabOrder(self.wrapperHeader, self.textBrowser)
+        QWidget.setTabOrder(self.textBrowser, self.embrulho)
 
         self.retranslateUi(RegProductPage)
 
         QMetaObject.connectSlotsByName(RegProductPage)
-    
+
+        #Inicio conexão com banco de dados  
+        banco = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="erp_resolution_speed"
+        )
+        #Fim conexão com banco de dados
+
+        def registerAction():
+        #Inicio declarando valores de entrada
+            codWrited = self.prod_cod.text()
+            ncmNbmWrited = self.prod_nbmncm.text()
+            descWrited = self.prod_descricao.text()
+            unidWrited = self.prod_unidade.text()
+            especieWrited = self.prod_especie.text()
+            pesoLiqWrited = self.prod_pesoL.text()
+            pesoBruWrited = self.prod_pesoB.text()
+            comprimentoWrited = self.prod_comprimento.text()
+            alturaWrited = self.prod_altura.text()
+            larguraWrited = self.prod_largura.text()
+            fornecedorWrited = self.prod_fornecedor.text()
+            precoCustoWrited = self.prod_precoCusto.text()
+            #Fim declarando valores de entrada
+
+            cursor = banco.cursor()
+            comandoSQL = "INSERT INTO produto (codigoProduto, ncm_nbm, nomeProduto, unidade, pesoLiquido, pesoBruto, alturaProduto, larguraProduto, comprimentoProduto, fornecedorProduto, preco) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+
+            dados = (str(codWrited), str(ncmNbmWrited), str(descWrited), str(unidWrited), str(pesoLiqWrited), str(pesoBruWrited), str(alturaWrited), str(larguraWrited), str(comprimentoWrited), str(fornecedorWrited), str(precoCustoWrited))
+
+            cursor.execute(comandoSQL, dados)
+            banco.commit()
+
         def exitWindow():
              RegProductPage.close()
         
         self.homeButton.clicked.connect(exitWindow)
         self.exitButton.clicked.connect(exitWindow)
+        self.btn_cadastro.clicked.connect(registerAction)
     # setupUi
 
     def retranslateUi(self, RegProductPage):
@@ -249,3 +301,4 @@ if __name__ == "__main__":
     ui.setupUi(product_window)
     product_window.show()
     sys.exit(app.exec())
+

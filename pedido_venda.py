@@ -190,6 +190,18 @@ class Ui_PedVendaPage(object):
         self.lb_ordemcompra.raise_()
         self.button_home_2.raise_()
         self.button_gnfe.raise_()
+        QWidget.setTabOrder(self.homeButton, self.exitButton)
+        QWidget.setTabOrder(self.exitButton, self.line_npedido)
+        QWidget.setTabOrder(self.line_npedido, self.line_cliente)
+        QWidget.setTabOrder(self.line_cliente, self.line_tipovenda)
+        QWidget.setTabOrder(self.line_tipovenda, self.line_prazopgt)
+        QWidget.setTabOrder(self.line_prazopgt, self.line_vendedor)
+        QWidget.setTabOrder(self.line_vendedor, self.line_ordemcompra)
+        QWidget.setTabOrder(self.line_ordemcompra, self.button_home_2)
+        QWidget.setTabOrder(self.button_home_2, self.button_gnfe)
+        QWidget.setTabOrder(self.button_gnfe, self.textBrowser_3)
+        QWidget.setTabOrder(self.textBrowser_3, self.wrapperHeader)
+        QWidget.setTabOrder(self.wrapperHeader, self.embrulho_2)
 
         self.retranslateUi(PedVendaPage)
 

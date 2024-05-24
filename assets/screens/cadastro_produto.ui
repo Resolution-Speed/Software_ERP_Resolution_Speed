@@ -540,7 +540,7 @@ QPushButton:hover
    <widget class="QLineEdit" name="prod_precoCusto">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>230</x>
       <y>320</y>
       <width>100</width>
       <height>25</height>
@@ -559,6 +559,26 @@ QPushButton:hover
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>homeButton</tabstop>
+  <tabstop>exitButton</tabstop>
+  <tabstop>prod_cod</tabstop>
+  <tabstop>prod_nbmncm</tabstop>
+  <tabstop>prod_descricao</tabstop>
+  <tabstop>prod_unidade</tabstop>
+  <tabstop>prod_especie</tabstop>
+  <tabstop>prod_pesoL</tabstop>
+  <tabstop>prod_pesoB</tabstop>
+  <tabstop>prod_comprimento</tabstop>
+  <tabstop>prod_altura</tabstop>
+  <tabstop>prod_largura</tabstop>
+  <tabstop>prod_fornecedor</tabstop>
+  <tabstop>prod_precoCusto</tabstop>
+  <tabstop>btn_cadastro</tabstop>
+  <tabstop>wrapperHeader</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>embrulho</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -45,4 +45,6 @@ insert into usuario values(0, "Wildovisk", "M", 12345, "USC");
 select * from usuario;
 insert into usuario values(0, "João", "M", 123456, "USC");
 
+update usuario set senha = 123456 where userMatricula = 1;
+
 drop database erp_resolution_speed;  /*Excluir banco de dados*/

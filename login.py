@@ -18,8 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QWidget)
-import assets.img.login_images
 import mysql.connector
+import assets.img.login_images
 from main import validarLogin
 from home import Ui_HomePage
 
@@ -121,6 +121,7 @@ class Ui_LoginPage(object):
 "height: 100px;\n"
 "border-radius: 11px;\n"
 "")
+        self.lineField_username.setMaxLength(50)
         self.lineField_password = QLineEdit(self.centralwidget)
         self.lineField_password.setObjectName(u"lineField_password")
         self.lineField_password.setGeometry(QRect(80, 280, 171, 31))
@@ -129,6 +130,8 @@ class Ui_LoginPage(object):
 "height: 100px;\n"
 "border-radius: 11px;\n"
 "")
+        self.lineField_password.setMaxLength(6)
+        self.lineField_password.setEchoMode(QLineEdit.Password)
         LoginPage.setCentralWidget(self.centralwidget)
         self.graphicsView.raise_()
         self.label_title_login.raise_()
@@ -145,7 +148,7 @@ class Ui_LoginPage(object):
 
         QMetaObject.connectSlotsByName(LoginPage)
 
-        #Inicio conexão com banco de dados 
+        #Inicio conexão com banco de dados  
         banco = mysql.connector.connect(
                 host="localhost",
                 user="root",
@@ -153,7 +156,8 @@ class Ui_LoginPage(object):
                 database="erp_resolution_speed"
         )
         #Fim conexão com banco de dados
-
+        
+        #Inicio Evento do botão login
         def action():
                 cursor = banco.cursor()
                 cursor.execute("select userNome, senha from usuario WHERE userNome = '%s' AND senha = '%s'" %(self.lineField_username.text(), self.lineField_password.text()))
@@ -167,13 +171,7 @@ class Ui_LoginPage(object):
                      print("Errado, Digite novamnete :)")
 
         self.button_login.clicked.connect(action)
-        #Inicio Evento do botão login
-        """
-        def action():
-            validarLogin(self, user_line, self.lineField_username.text(), pswd_line, self.lineField_password.text(), LoginPage)
-        self.button_login.clicked.connect(action)
-        """
-        #Fim evento do botão login
+        #fim Evento do botão login
     # setupUi
 
     def retranslateUi(self, LoginPage):

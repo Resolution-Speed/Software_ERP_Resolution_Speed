@@ -444,6 +444,21 @@ QPushButton:hover
    <zorder>button_gnfe</zorder>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>homeButton</tabstop>
+  <tabstop>exitButton</tabstop>
+  <tabstop>line_npedido</tabstop>
+  <tabstop>line_cliente</tabstop>
+  <tabstop>line_tipovenda</tabstop>
+  <tabstop>line_prazopgt</tabstop>
+  <tabstop>line_vendedor</tabstop>
+  <tabstop>line_ordemcompra</tabstop>
+  <tabstop>button_home_2</tabstop>
+  <tabstop>button_gnfe</tabstop>
+  <tabstop>textBrowser_3</tabstop>
+  <tabstop>wrapperHeader</tabstop>
+  <tabstop>embrulho_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

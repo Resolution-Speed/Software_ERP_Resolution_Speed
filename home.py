@@ -86,7 +86,7 @@ class Ui_HomePage(object):
 "")
         self.homeTitle = QLabel(self.centralwidget)
         self.homeTitle.setObjectName(u"homeTitle")
-        self.homeTitle.setGeometry(QRect(280, 20, 47, 13))
+        self.homeTitle.setGeometry(QRect(280, 20, 41, 16))
         self.homeTitle.setStyleSheet(u"background-color: transparent;\n"
 "color: #fff;\n"
 "font-size: 12px")
@@ -196,6 +196,13 @@ class Ui_HomePage(object):
         self.homeButton_cad_prod.raise_()
         self.homeButton_ped_ven.raise_()
         self.homeButton_nfe.raise_()
+        QWidget.setTabOrder(self.homeButton, self.exitButton)
+        QWidget.setTabOrder(self.exitButton, self.homeButton_cad_prod)
+        QWidget.setTabOrder(self.homeButton_cad_prod, self.homeButton_ped_ven)
+        QWidget.setTabOrder(self.homeButton_ped_ven, self.homeButton_nfe)
+        QWidget.setTabOrder(self.homeButton_nfe, self.wrapperMenu)
+        QWidget.setTabOrder(self.wrapperMenu, self.textBrowser)
+        QWidget.setTabOrder(self.textBrowser, self.wrapperHeader)
 
         self.retranslateUi(HomePage)
 

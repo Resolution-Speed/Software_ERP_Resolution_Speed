@@ -322,6 +322,16 @@ QPushButton:hover
    <zorder>homeButton_nfe</zorder>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>homeButton</tabstop>
+  <tabstop>exitButton</tabstop>
+  <tabstop>homeButton_cad_prod</tabstop>
+  <tabstop>homeButton_ped_ven</tabstop>
+  <tabstop>homeButton_nfe</tabstop>
+  <tabstop>wrapperMenu</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>wrapperHeader</tabstop>
+ </tabstops>
  <resources>
   <include location="../img/home_images.qrc"/>
  </resources>

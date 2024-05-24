@@ -252,6 +252,9 @@ border-radius: 11px;
     <property name="text">
      <string/>
     </property>
+    <property name="maxLength">
+     <number>50</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineField_password">
     <property name="geometry">
@@ -271,6 +274,12 @@ border-radius: 11px;
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="maxLength">
+     <number>6</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
     </property>
    </widget>
    <zorder>graphicsView</zorder>
