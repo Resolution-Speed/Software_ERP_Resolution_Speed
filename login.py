@@ -117,6 +117,7 @@ class Ui_LoginPage(object):
         self.lineField_username.setObjectName(u"lineField_username")
         self.lineField_username.setGeometry(QRect(80, 210, 171, 31))
         self.lineField_username.setStyleSheet(u"background-color:#FFF;\n"
+"color: #000;\n"
 "width: 100px;\n"
 "height: 100px;\n"
 "border-radius: 11px;\n"
@@ -126,6 +127,7 @@ class Ui_LoginPage(object):
         self.lineField_password.setObjectName(u"lineField_password")
         self.lineField_password.setGeometry(QRect(80, 280, 171, 31))
         self.lineField_password.setStyleSheet(u"background-color:#FFF;\n"
+"color: #000;\n"
 "width: 100px;\n"
 "height: 100px;\n"
 "border-radius: 11px;\n"
