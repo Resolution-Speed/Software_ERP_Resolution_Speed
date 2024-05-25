@@ -228,6 +228,20 @@ class Ui_RegProductPage(object):
 
         QMetaObject.connectSlotsByName(RegProductPage)
 
+        def resetFields():
+            self.prod_cod.setText("")
+            self.prod_nbmncm.setText("")
+            self.prod_descricao.setText("")
+            self.prod_unidade.setText("")
+            self.prod_especie.setText("")
+            self.prod_pesoL.setText("")
+            self.prod_pesoB.setText("")
+            self.prod_comprimento.setText("")
+            self.prod_altura.setText("")
+            self.prod_largura.setText("")
+            self.prod_fornecedor.setText("")
+            self.prod_precoCusto.setText("")
+
         #Inicio conexão com banco de dados  
         banco = mysql.connector.connect(
                 host="localhost",
@@ -260,6 +274,8 @@ class Ui_RegProductPage(object):
 
             cursor.execute(comandoSQL, dados)
             banco.commit()
+            print(dados)
+            resetFields()
 
         def exitWindow():
              RegProductPage.close()

@@ -1,7 +1,6 @@
 """
 Main file for Public functions
 """
-import mysql.connector
 #Function "Validar Login" start
 def validarLogin(self, username_write, username_sql, password_write, password_sql, LoginPage):
     if username_write == username_sql and password_write == password_sql:

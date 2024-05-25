@@ -41,7 +41,7 @@ create table produto_venda(
     foreign key (nPed) references pedidoVenda (numPedido)
 );
 
-insert into usuario values(0, "Wildovisk", "M", 12345, "USC");
+insert into usuario values(0, "Wildovisk", "M", 123456, "USC");
 select * from usuario;
 insert into usuario values(0, "João", "M", 123456, "USC");
 

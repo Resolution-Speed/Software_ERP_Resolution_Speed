@@ -156,12 +156,13 @@ class Ui_LoginPage(object):
                 database="erp_resolution_speed"
         )
         #Fim conexão com banco de dados
-        
+
         #Inicio Evento do botão login
         def action():
                 cursor = banco.cursor()
                 cursor.execute("select userNome, senha from usuario WHERE userNome = '%s' AND senha = '%s'" %(self.lineField_username.text(), self.lineField_password.text()))
                 result_select = cursor.fetchone()
+                print(result_select)
                 if not result_select == None:
                         user_result = result_select[0]
                         pswd_result = result_select[1]
