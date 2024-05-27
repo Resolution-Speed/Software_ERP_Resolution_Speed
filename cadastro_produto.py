@@ -268,9 +268,9 @@ class Ui_RegProductPage(object):
             #Fim declarando valores de entrada
 
             cursor = banco.cursor()
-            comandoSQL = "INSERT INTO produto (codigoProduto, ncm_nbm, nomeProduto, unidade, pesoLiquido, pesoBruto, alturaProduto, larguraProduto, comprimentoProduto, fornecedorProduto, preco) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            comandoSQL = "INSERT INTO produto (codigoProduto, ncm_nbm, nomeProduto, unidade, especie, pesoLiquido, pesoBruto, alturaProduto, larguraProduto, comprimentoProduto, fornecedorProduto, preco) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
-            dados = (str(codWrited), str(ncmNbmWrited), str(descWrited), str(unidWrited), str(pesoLiqWrited), str(pesoBruWrited), str(alturaWrited), str(larguraWrited), str(comprimentoWrited), str(fornecedorWrited), str(precoCustoWrited))
+            dados = (str(codWrited), str(ncmNbmWrited), str(descWrited), str(unidWrited), str(especieWrited), str(pesoLiqWrited), str(pesoBruWrited), str(alturaWrited), str(larguraWrited), str(comprimentoWrited), str(fornecedorWrited), str(precoCustoWrited))
 
             cursor.execute(comandoSQL, dados)
             banco.commit()
@@ -279,7 +279,7 @@ class Ui_RegProductPage(object):
 
         def exitWindow():
              RegProductPage.close()
-        
+
         self.homeButton.clicked.connect(exitWindow)
         self.exitButton.clicked.connect(exitWindow)
         self.btn_cadastro.clicked.connect(registerAction)
