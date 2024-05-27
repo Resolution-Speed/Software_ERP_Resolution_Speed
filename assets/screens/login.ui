@@ -249,6 +249,9 @@ height: 100px;
 border-radius: 11px;
 </string>
     </property>
+    <property name="inputMask">
+     <string/>
+    </property>
     <property name="text">
      <string/>
     </property>

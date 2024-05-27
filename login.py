@@ -15,7 +15,7 @@ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+    QPalette, QPixmap, QRadialGradient, QTransform, QIntValidator, QTextCursor)
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QWidget)
 import mysql.connector
@@ -122,7 +122,7 @@ class Ui_LoginPage(object):
 "height: 100px;\n"
 "border-radius: 11px;\n"
 "")
-        self.lineField_username.setMaxLength(50)
+        self.lineField_username.setMaxLength(10)
         self.lineField_password = QLineEdit(self.centralwidget)
         self.lineField_password.setObjectName(u"lineField_password")
         self.lineField_password.setGeometry(QRect(80, 280, 171, 31))
