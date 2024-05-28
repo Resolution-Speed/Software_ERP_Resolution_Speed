@@ -446,6 +446,9 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
+    <property name="maxLength">
+     <number>4</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="prod_nbmncm">
     <property name="geometry">
@@ -455,6 +458,9 @@ QPushButton:hover
       <width>100</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="maxLength">
+     <number>8</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="prod_descricao">
@@ -466,6 +472,9 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
+    <property name="maxLength">
+     <number>80</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="prod_unidade">
     <property name="geometry">
@@ -476,15 +485,8 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="prod_especie">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>200</y>
-      <width>100</width>
-      <height>25</height>
-     </rect>
+    <property name="maxLength">
+     <number>4</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="prod_pesoL">
@@ -496,6 +498,12 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="prod_pesoB">
     <property name="geometry">
@@ -505,6 +513,12 @@ QPushButton:hover
       <width>100</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="prod_comprimento">
@@ -516,6 +530,12 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="prod_altura">
     <property name="geometry">
@@ -525,6 +545,12 @@ QPushButton:hover
       <width>100</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>5</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="prod_largura">
@@ -536,6 +562,12 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="maxLength">
+     <number>5</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="prod_precoCusto">
     <property name="geometry">
@@ -545,6 +577,9 @@ QPushButton:hover
       <width>100</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="prod_fornecedor">
@@ -556,6 +591,35 @@ QPushButton:hover
       <height>25</height>
      </rect>
     </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="prod_especie">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>200</y>
+      <width>100</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #000</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>PRODUTO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SERVIÇO</string>
+     </property>
+    </item>
    </widget>
   </widget>
  </widget>
@@ -566,7 +630,6 @@ QPushButton:hover
   <tabstop>prod_nbmncm</tabstop>
   <tabstop>prod_descricao</tabstop>
   <tabstop>prod_unidade</tabstop>
-  <tabstop>prod_especie</tabstop>
   <tabstop>prod_pesoL</tabstop>
   <tabstop>prod_pesoB</tabstop>
   <tabstop>prod_comprimento</tabstop>
