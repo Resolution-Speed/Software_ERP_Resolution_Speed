@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Pedido de Venda</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../img/login_images.qrc">
+    <normaloff>:/images/Resolution_speed_small.png</normaloff>:/images/Resolution_speed_small.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: #fff;</string>
   </property>
@@ -459,6 +463,8 @@ QPushButton:hover
   <tabstop>wrapperHeader</tabstop>
   <tabstop>embrulho_2</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="../img/login_images.qrc"/>
+ </resources>
  <connections/>
 </ui>

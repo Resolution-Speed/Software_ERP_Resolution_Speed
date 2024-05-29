@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Pagina Inicial</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../img/home_images.qrc">
+    <normaloff>:/menuImg/Resolution_speed_small.png</normaloff>:/menuImg/Resolution_speed_small.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(93, 215, 241);
 font: 12pt &quot;Inter&quot;;</string>

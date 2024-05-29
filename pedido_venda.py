@@ -208,7 +208,7 @@ class Ui_PedVendaPage(object):
 
         QMetaObject.connectSlotsByName(PedVendaPage)
 
-         #Inicio conexão com banco de dados  
+        #Inicio conexão com banco de dados  
         banco = mysql.connector.connect(
                 host="localhost",
                 user="root",

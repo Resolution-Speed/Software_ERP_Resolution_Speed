@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Login</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../img/login_images.qrc">
+    <normaloff>:/images/Resolution_speed_small.png</normaloff>:/images/Resolution_speed_small.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: #000;
 font: &quot;Inter&quot; 12pt ;

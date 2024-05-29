@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Cadastro de Produto</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../img/login_images.qrc">
+    <normaloff>:/images/Resolution_speed_small.png</normaloff>:/images/Resolution_speed_small.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: #fff;
 
@@ -642,6 +646,8 @@ QPushButton:hover
   <tabstop>textBrowser</tabstop>
   <tabstop>embrulho</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="../img/login_images.qrc"/>
+ </resources>
  <connections/>
 </ui>

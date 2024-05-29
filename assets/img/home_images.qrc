@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="menuImg">
+    <file>Resolution_speed_small.png</file>
     <file>nfe_hover.png</file>
     <file>product_hover.png</file>
     <file>sell_request_hover.png</file>
