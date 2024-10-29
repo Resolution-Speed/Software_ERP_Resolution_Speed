@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="menuImg">
+    <file>nfe_ilustration.png</file>
+    <file>sellrequest_ilustration.png</file>
+    <file>product_ilustration.png</file>
     <file>nfe_hover.png</file>
     <file>product_hover.png</file>
     <file>sell_request_hover.png</file>
