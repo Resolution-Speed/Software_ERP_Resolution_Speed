@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QTextBrowser,
     QWidget)
+import mysql.connector
 
 class Ui_PedVendaPage(object):
     def setupUi(self, PedVendaPage):
@@ -207,12 +208,50 @@ class Ui_PedVendaPage(object):
 
         QMetaObject.connectSlotsByName(PedVendaPage)
 
+        #Inicio conexão com banco de dados  
+        banco = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="",
+                database="erp_resolution_speed"
+        )
+        #Fim conexão com banco de dados
+
+        def resetFields():
+            self.line_npedido.setText("")
+            self.line_cliente.setText("")
+            self.line_tipovenda.setText("")
+            self.line_prazopgt.setText("")
+            self.line_vendedor.setText("")
+            self.line_ordemcompra.setText("")
+        
+        def registerAction():
+        #Inicio declarando valores de entrada
+            codPvWrited = self.line_npedido.text()
+            clientePvWrited = self.line_cliente.text()
+            tpVendaWrited = self.line_tipovenda.text()
+            przWrited = self.line_prazopgt.text()
+            vendedorWrited = self.line_vendedor.text()
+            ordemCompWrited = self.line_ordemcompra.text()
+            #Fim declarando valores de entrada
+
+            cursor = banco.cursor()
+            comandoSQL = "INSERT INTO pedidoVenda (numPedido, clientePedido, tipoVenda, prazoPedido, vendedorPedido, ordemCompra) VALUES (%s, %s, %s, %s, %s, %s)"
+
+            dados = (str(codPvWrited), str(clientePvWrited), str(tpVendaWrited), str(przWrited), str(vendedorWrited), str(ordemCompWrited))
+
+            cursor.execute(comandoSQL, dados)
+            banco.commit()
+            print(dados)
+            resetFields()
+
         def exitWindow():
             PedVendaPage.close()
         
         self.homeButton.clicked.connect(exitWindow)
         self.exitButton.clicked.connect(exitWindow)
 
+        self.button_home_2.clicked.connect(registerAction)
     # setupUi
 
     def retranslateUi(self, PedVendaPage):

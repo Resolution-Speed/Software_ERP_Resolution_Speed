@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'home.ui'
+## Form generated from reading UI file 'HOME.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
+
 import sys
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
@@ -38,10 +39,10 @@ class Ui_HomePage(object):
     def setupUi(self, HomePage):
         if not HomePage.objectName():
             HomePage.setObjectName(u"HomePage")
-        HomePage.resize(600, 530)
-        HomePage.setMinimumSize(QSize(600, 530))
-        HomePage.setMaximumSize(QSize(600, 530))
-        HomePage.setStyleSheet(u"background-color: rgb(93, 215, 241);\n"
+        HomePage.resize(1100, 600)
+        HomePage.setMinimumSize(QSize(1100, 600))
+        HomePage.setMaximumSize(QSize(1100, 600))
+        HomePage.setStyleSheet(u"background-color: #fff;\n"
 "font: 12pt \"Inter\";")
         self.centralwidget = QWidget(HomePage)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -59,7 +60,8 @@ class Ui_HomePage(object):
 "	background-color: rgb(93, 215, 241); \n"
 "	border: 1px solid rgb(93, 215, 241);\n"
 "	border-radius: 5px;\n"
-"	font-size: 10px;	\n"
+"	font-size: 10px;\n"
+"	color: #fff;\n"
 "}\n"
 "QPushButton:hover\n"
 "{\n"
@@ -69,14 +71,15 @@ class Ui_HomePage(object):
 "")
         self.exitButton = QPushButton(self.centralwidget)
         self.exitButton.setObjectName(u"exitButton")
-        self.exitButton.setGeometry(QRect(490, 10, 105, 31))
+        self.exitButton.setGeometry(QRect(980, 10, 105, 31))
         self.exitButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.exitButton.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	background-color: rgb(93, 215, 241); \n"
 "	border: 1px solid rgb(93, 215, 241);\n"
 "	border-radius: 5px;\n"
-"	font-size: 10px;	\n"
+"	font-size: 10px;\n"
+"	color: #fff;\n"
 "}\n"
 "QPushButton:hover\n"
 "{\n"
@@ -86,30 +89,30 @@ class Ui_HomePage(object):
 "")
         self.homeTitle = QLabel(self.centralwidget)
         self.homeTitle.setObjectName(u"homeTitle")
-        self.homeTitle.setGeometry(QRect(280, 20, 41, 16))
+        self.homeTitle.setGeometry(QRect(530, 20, 71, 16))
         self.homeTitle.setStyleSheet(u"background-color: transparent;\n"
 "color: #fff;\n"
 "font-size: 12px")
         self.wrapperMenu = QGraphicsView(self.centralwidget)
         self.wrapperMenu.setObjectName(u"wrapperMenu")
-        self.wrapperMenu.setGeometry(QRect(60, 70, 481, 430))
-        self.wrapperMenu.setStyleSheet(u"border: 5px solid #000;\n"
+        self.wrapperMenu.setGeometry(QRect(60, 70, 981, 501))
+        self.wrapperMenu.setStyleSheet(u"border: 5px solid rgb(93, 215, 241);\n"
 "border-radius: 10px;\n"
 "")
         self.textBrowser = QTextBrowser(self.centralwidget)
         self.textBrowser.setObjectName(u"textBrowser")
-        self.textBrowser.setGeometry(QRect(200, 70, 210, 35))
-        self.textBrowser.setStyleSheet(u"background-color: #000;\n"
+        self.textBrowser.setGeometry(QRect(60, 70, 210, 35))
+        self.textBrowser.setStyleSheet(u"background-color: rgb(93, 215, 241);\n"
 "color: #fff;\n"
 "border-bottom-right-radius: 10px;\n"
-"border-bottom-left-radius: 10px;")
+"")
         self.wrapperHeader = QGraphicsView(self.centralwidget)
         self.wrapperHeader.setObjectName(u"wrapperHeader")
-        self.wrapperHeader.setGeometry(QRect(0, 0, 601, 50))
+        self.wrapperHeader.setGeometry(QRect(0, 0, 1101, 50))
         self.wrapperHeader.setStyleSheet(u"background-color: rgb(0, 0, 0);")
         self.homeButton_cad_prod = QPushButton(self.centralwidget)
         self.homeButton_cad_prod.setObjectName(u"homeButton_cad_prod")
-        self.homeButton_cad_prod.setGeometry(QRect(80, 230, 100, 100))
+        self.homeButton_cad_prod.setGeometry(QRect(90, 390, 281, 100))
         font1 = QFont()
         font1.setFamilies([u"Inter"])
         font1.setBold(True)
@@ -119,13 +122,13 @@ class Ui_HomePage(object):
         self.homeButton_cad_prod.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	image: url(:/menuImg/product.png);\n"
-"	border: 1px solid #000000;\n"
+"	border: 1px solid rgb(93, 215, 241);\n"
 "	border-radius: 10px;\n"
 "	font-size: 7px;\n"
 "	color: #fff;\n"
 "	font-weight: 700;\n"
 "	text-align: bottom;\n"
-"	background-color: #000;\n"
+"	background-color: rgb(93, 215, 241);\n"
 "	padding: 10px 11px;\n"
 "	transition:  1s;\n"
 "}\n"
@@ -138,19 +141,19 @@ class Ui_HomePage(object):
 "}")
         self.homeButton_ped_ven = QPushButton(self.centralwidget)
         self.homeButton_ped_ven.setObjectName(u"homeButton_ped_ven")
-        self.homeButton_ped_ven.setGeometry(QRect(250, 230, 100, 100))
+        self.homeButton_ped_ven.setGeometry(QRect(410, 390, 281, 100))
         self.homeButton_ped_ven.setFont(font1)
         self.homeButton_ped_ven.setCursor(QCursor(Qt.PointingHandCursor))
         self.homeButton_ped_ven.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	image: url(:/menuImg/sell_request.png);\n"
-"	border: 1px solid #000000;\n"
+"	border: 1px solid rgb(93, 215, 241);\n"
 "	border-radius: 10px;\n"
 "	font-size: 7px;\n"
 "	color: #fff;\n"
 "	font-weight: 700;\n"
 "	text-align: bottom;\n"
-"	background-color: #000;\n"
+"	background-color: rgb(93, 215, 241);\n"
 "	padding: 10px 11px;\n"
 "	transition:  1s;\n"
 "}\n"
@@ -163,19 +166,19 @@ class Ui_HomePage(object):
 "}")
         self.homeButton_nfe = QPushButton(self.centralwidget)
         self.homeButton_nfe.setObjectName(u"homeButton_nfe")
-        self.homeButton_nfe.setGeometry(QRect(420, 230, 100, 100))
+        self.homeButton_nfe.setGeometry(QRect(730, 390, 281, 100))
         self.homeButton_nfe.setFont(font1)
         self.homeButton_nfe.setCursor(QCursor(Qt.PointingHandCursor))
         self.homeButton_nfe.setStyleSheet(u"QPushButton\n"
 "{\n"
 "	image: url(:/menuImg/nfe.png);\n"
-"	border: 1px solid #000000;\n"
+"	border: 1px solid rgb(93, 215, 241);\n"
 "	border-radius: 10px;\n"
 "	font-size: 7px;\n"
 "	color: #fff;\n"
 "	font-weight: 700;\n"
 "	text-align: bottom;\n"
-"	background-color: #000;\n"
+"	background-color: rgb(93, 215, 241);\n"
 "	padding: 10px 11px;\n"
 "	transition:  1s;\n"
 "}\n"
@@ -186,6 +189,18 @@ class Ui_HomePage(object):
 "	background-color: rgb(255, 255, 255);\n"
 "	color: #000000;\n"
 "}")
+        self.widget = QWidget(self.centralwidget)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(90, 180, 281, 191))
+        self.widget.setStyleSheet(u"image: url(:/menuImg/product_ilustration.png)")
+        self.widget_2 = QWidget(self.centralwidget)
+        self.widget_2.setObjectName(u"widget_2")
+        self.widget_2.setGeometry(QRect(410, 180, 281, 191))
+        self.widget_2.setStyleSheet(u"image: url(:/menuImg/sellrequest_ilustration.png)")
+        self.widget_3 = QWidget(self.centralwidget)
+        self.widget_3.setObjectName(u"widget_3")
+        self.widget_3.setGeometry(QRect(730, 180, 281, 191))
+        self.widget_3.setStyleSheet(u"image: url(:/menuImg/nfe_ilustration.png)")
         HomePage.setCentralWidget(self.centralwidget)
         self.wrapperHeader.raise_()
         self.exitButton.raise_()
@@ -196,6 +211,9 @@ class Ui_HomePage(object):
         self.homeButton_cad_prod.raise_()
         self.homeButton_ped_ven.raise_()
         self.homeButton_nfe.raise_()
+        self.widget.raise_()
+        self.widget_2.raise_()
+        self.widget_3.raise_()
         QWidget.setTabOrder(self.homeButton, self.exitButton)
         QWidget.setTabOrder(self.exitButton, self.homeButton_cad_prod)
         QWidget.setTabOrder(self.homeButton_cad_prod, self.homeButton_ped_ven)
@@ -227,7 +245,7 @@ class Ui_HomePage(object):
         HomePage.setWindowTitle(QCoreApplication.translate("HomePage", u"Pagina Inicial", None))
         self.homeButton.setText(QCoreApplication.translate("HomePage", u"HOME", None))
         self.exitButton.setText(QCoreApplication.translate("HomePage", u"SAIR", None))
-        self.homeTitle.setText(QCoreApplication.translate("HomePage", u"HOME", None))
+        self.homeTitle.setText(QCoreApplication.translate("HomePage", u"P\u00e1gina Inicial", None))
         self.textBrowser.setHtml(QCoreApplication.translate("HomePage", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

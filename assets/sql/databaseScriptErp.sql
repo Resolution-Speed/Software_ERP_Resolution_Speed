@@ -16,6 +16,7 @@ create table produto(
     ncm_nbm int not null,
     nomeProduto varchar(80) not null,
     unidade int not null,
+    especie char(2) not null,
     pesoLiquido float not null,
     pesoBruto float not null,
     alturaProduto float not null,
@@ -42,8 +43,8 @@ create table produto_venda(
 );
 
 insert into usuario values(0, "Wildovisk", "M", 123456, "USC");
-select * from usuario;
 insert into usuario values(0, "João", "M", 123456, "USC");
+select * from usuario;
 
 update usuario set senha = 123456 where userMatricula = 1;
 

@@ -2,6 +2,6 @@ Comandos python:
 
 pip install PyQt5    >>>>> Esse comando instala a biblioteca/módulo do PyQt5 para usarmos o ferramentário do QtDesigner no python.
 
-pyside6 home_images.qrc -o home_images.py >>>> Gera um arquivo python a partir do arquivo qrc de imagens
+pyside6-rcc home_images.qrc -o home_images.py >>>> Gera um arquivo python a partir do arquivo qrc de imagens
 
 pyside6-uic HOME.ui -o home.py >>>> Gera um arquivo python do arquivo UI
