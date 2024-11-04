@@ -12,11 +12,11 @@ create table usuario(
 );
 
 create table produto(
-	codigoProduto int primary key unique not null auto_increment,
+	codigoProduto int primary key unique not null,
     ncm_nbm int not null,
     nomeProduto varchar(80) not null,
     unidade int not null,
-    especie char(2) not null,
+    especie varchar(15) not null,
     pesoLiquido float not null,
     pesoBruto float not null,
     alturaProduto float not null,
@@ -42,7 +42,7 @@ create table produto_venda(
     foreign key (nPed) references pedidoVenda (numPedido)
 );
 
-insert into usuario values(0, "Wildovisk", "M", 123456, "USC");
+insert into usuario values(0, "Wildo", "M", 123456, "USC");
 insert into usuario values(0, "João", "M", 123456, "USC");
 select * from usuario;
 
